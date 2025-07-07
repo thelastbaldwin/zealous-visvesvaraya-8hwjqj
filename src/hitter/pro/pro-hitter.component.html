@@ -1,0 +1,65 @@
+<h2>Pro Hitting</h2>
+<table border="1" cellspacing="0" cellpadding="4">
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Age</th>
+      <th>Level</th>
+      <th>Org</th>
+      <th>Games</th>
+      <th>PA</th>
+      <th>AB</th>
+      <th>Runs</th>
+      <th>Hits</th>
+      <th>1B</th>
+      <th>2B</th>
+      <th>3B</th>
+      <th>HR</th>
+      <th>RBI</th>
+      <th>BB</th>
+      <th>HBP</th>
+      <th>SO</th>
+      <th>SB</th>
+      <th>CS</th>
+      <th>GIDP</th>
+      <th>AVG</th>
+      <th>OBP</th>
+      <th>SLG</th>
+      <th>OPS</th>
+      <th>BB%</th>
+      <th>K%</th>
+      <th>wOBA</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of proHittingData">
+      <td>{{ row.iYear }}</td>
+      <td>{{ row.fAge }}</td>
+      <td>{{ row.vchLVL }}</td>
+      <td>{{ row.vchOrg }}</td>
+      <td>{{ row.iGames }}</td>
+      <td>{{ row.iPlateAppearances }}</td>
+      <td>{{ row.iAtBats }}</td>
+      <td>{{ row.iRuns }}</td>
+      <td>{{ row.iHits }}</td>
+      <td>{{ row.iSingles }}</td>
+      <td>{{ row.iDoubles }}</td>
+      <td>{{ row.iTriples }}</td>
+      <td>{{ row.iHomeRuns }}</td>
+      <td>{{ row.iRunsBattedIn }}</td>
+      <td>{{ row.iWalks }}</td>
+      <td>{{ row.iHitByPitches }}</td>
+      <td>{{ row.iStrikeOuts }}</td>
+      <td>{{ row.iStolenBases }}</td>
+      <td>{{ row.iCaughtStealing }}</td>
+      <td>{{ row.iGroundIntoDoublePlays }}</td>
+      <td>{{ row.fBattingAverage }}</td>
+      <td>{{ row.fOnBasePercentage }}</td>
+      <td>{{ row.fSlugging }}</td>
+      <td>{{ row.fOPS }}</td>
+      <td>{{ row.fWalkRate }}%</td>
+      <td>{{ row.fStrikeoutRate }}%</td>
+      <td>{{ row.fWOBA }}</td>
+    </tr>
+  </tbody>
+</table>

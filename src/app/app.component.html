@@ -1,0 +1,89 @@
+<div>
+  <div class="tab-buttons">
+    <button
+      (click)="selectedTab = 'pro'"
+      [class.active]="selectedTab === 'pro'"
+    >
+      Pro
+    </button>
+    <button
+      (click)="selectedTab = 'ama'"
+      [class.active]="selectedTab === 'ama'"
+    >
+      Amateur
+    </button>
+  </div>
+
+  <div class="tab-content">
+    <pro-hitter *ngIf="selectedTab === 'pro'"></pro-hitter>
+    <ama-hitter *ngIf="selectedTab === 'ama'"></ama-hitter>
+  </div>
+</div>
+
+<h2>Overview</h2>
+<p>
+  This exercise is designed to simulate real-world tasks on our engineering
+  team: refactoring existing Angular components for reusability and implementing
+  new features across separate use cases. This isn't a test of your current
+  knowledge of Angular — the focus is on code quality, clarity, reuse, and your
+  ability to reason through a small front-end system. You’ll be working with two
+  existing statically defined tables (amateur and pro hitting data) rendered
+  with simple HTML, with a goal of consolidating shared logic and extending
+  functionality.
+</p>
+<h2>Objectives</h2>
+You’ll complete three main tasks:
+<ol>
+  <li>
+    Add classes or interfaces to represent the different data types for better
+    clarity and maintainability.
+    <ul>
+      <li>
+        For the purposes of this exercise, the data in
+        <strong>src/mockData.ts</strong> contains year by year hitting data for
+        a random player with Pro and Amateur level data in recent seasons.
+      </li>
+      <li>
+        Notice that the mock data contains different fields between Pro and
+        Amateur. It's up to you to determine which fields are shared, and which
+        fields are unique to each data type when constructing your
+        classes/interfaces.
+      </li>
+    </ul>
+  </li>
+  <li>
+    Refactor the two tables into a single reusable Angular component that can
+    handle both pro and amateur data structures.
+    <ul>
+      <li>
+        The existing components can be found in the
+        <strong>src/hitter</strong> folder
+      </li>
+    </ul>
+  </li>
+  <li>
+    Add background shading to the wOBA and OPS columns to visually indicate
+    player performance relative to the league average for that level.
+    <ul>
+      <li>
+        League averages and standard deviations by year and level are available
+        in <strong>src/mockData.ts</strong>. (Assume these are scaled based on
+        the number of plate appearances the player had at a given level)
+      </li>
+      <li>
+        Cells representing above-average performance should be shaded green;
+        below-average performance should be shaded red. The color should use a
+        <i>smoothed gradient</i> from red to green based on how many standard
+        deviations the player's value deviates from the average. Treat -2
+        standard deviations as fully red, 0 as neutral (white or no background),
+        and +2 as fully green. Values beyond this range should be clamped to the
+        min/max color.
+      </li>
+      <li>
+        Note that the color scaling should work for Pro and Amateur tables based
+        on your previous refactor. Any style changes can be done globally by
+        updating <strong>src/app.component.css</strong>
+      </li>
+    </ul>
+  </li>
+</ol>
