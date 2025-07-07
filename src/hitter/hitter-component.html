@@ -88,10 +88,10 @@
         <td>{{ row.fBattingAverage }}</td>
         <td>{{ row.fOnBasePercentage }}</td>
         <td>{{ row.fSlugging }}</td>
-        <td>{{ row.fOPS }}</td>
+        <td  [style.background-color]="colorFromSD(row.fOPS)">{{ row.fOPS }}</td>
         <td>{{ row.fWalkRate }}%</td>
         <td>{{ row.fStrikeoutRate }}%</td>
-        <td>{{ row.fWOBA }}</td>
+        <td [style.background-color]="colorFromSD(row.fOPS)">{{ row.fWOBA }}</td>
         </tr>
     </tbody>
     </table>

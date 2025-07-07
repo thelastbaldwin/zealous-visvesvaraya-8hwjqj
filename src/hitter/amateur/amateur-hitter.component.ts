@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AppService } from "src/app/app.service";
 import { type AmateurHittingData } from "src/app/types";
+import { getSDColor, clamp } from "src/app/util";
 
 @Component({
   selector: "ama-hitter",
@@ -17,5 +18,9 @@ export class AmateurHitterComponent implements OnInit {
       this.hittingData = results;
       this.isPro = false;
     });
+  }
+
+  colorFromSD(value: number): string {
+    return getSDColor(clamp(value, -2, 2));
   }
 }
