@@ -1,45 +1,8 @@
-interface HittingData {
-  fBattingAverage: number,
-  fOnBasePercentage: number,
-  fOPS: number,
-  fSlugging: number,
-  fStrikeoutRate: number,
-  fWalkRate: number,
-  fWOBA: number,
-  iAtBats: number,
-  iCaughtStealing: number,
-  iDoubles: number,
-  iGames: number,
-  iHitByPitches: number,
-  iHits: number,
-  iHomeRuns: number,
-  iIntentionalWalks: number,
-  iPlateAppearances: number,
-  iRuns: number,
-  iRunsBattedIn: number,
-  iSingles: number,
-  iStolenBases: number,
-  iStrikeOuts: number,
-  iTriples: number,
-  iWalks: number,
-  iYear: number,
-  vchDivision: string,
-  vchTeam: string,
-  guidPlayerId: string,
-}
-
-export interface AmateurHittingData extends HittingData {    
-    iIntentionalWalks: 0,
-    vchDivision: string,
-    vchTeam: string,
-}
-
-export interface ProHittingData extends HittingData {    
-    iGroundIntoDoublePlays: number,
-    fAge: number,
-    vchLVL: string,
-    vchOrg: string,
-}
+import {
+  type AmateurHittingData,
+  type ProHittingData,
+  type PlayerAverage,
+} from "./app/types";
 
 export const amateurHittingData: AmateurHittingData[] = [
   {
@@ -252,7 +215,7 @@ export const proHittingData: ProHittingData[] = [
   },
 ];
 
-export const amateurAverages = [
+export const amateurAverages: PlayerAverage[] = [
   {
     iYear: 2020,
     vchField: "fWOBA",
@@ -311,7 +274,7 @@ export const amateurAverages = [
   },
 ];
 
-export const proAverages = [
+export const proAverages: PlayerAverage[] = [
   {
     iYear: 2023,
     vchField: "fWOBA",

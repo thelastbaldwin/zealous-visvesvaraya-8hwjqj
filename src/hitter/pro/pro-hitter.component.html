@@ -3,9 +3,9 @@
   <thead>
     <tr>
       <th>Year</th>
-      <th>Age</th>
-      <th>Level</th>
-      <th>Org</th>
+      <th>Age</th> <!-- Only Pro -->
+      <th>Level</th> <!-- Only Pro-->
+      <th>Org</th> <!-- Only Pro -->
       <th>Games</th>
       <th>PA</th>
       <th>AB</th>
@@ -21,7 +21,7 @@
       <th>SO</th>
       <th>SB</th>
       <th>CS</th>
-      <th>GIDP</th>
+      <th>GIDP</th> <!-- Only Pro -->
       <th>AVG</th>
       <th>OBP</th>
       <th>SLG</th>
@@ -34,9 +34,11 @@
   <tbody>
     <tr *ngFor="let row of proHittingData">
       <td>{{ row.iYear }}</td>
+      <!-- Only Pro-->
       <td>{{ row.fAge }}</td>
       <td>{{ row.vchLVL }}</td>
       <td>{{ row.vchOrg }}</td>
+      <!-- end Only Pro-->
       <td>{{ row.iGames }}</td>
       <td>{{ row.iPlateAppearances }}</td>
       <td>{{ row.iAtBats }}</td>

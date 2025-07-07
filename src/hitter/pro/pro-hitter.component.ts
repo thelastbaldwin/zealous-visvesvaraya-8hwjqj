@@ -1,19 +1,21 @@
 import { Component, OnInit } from "@angular/core";
 import { AppService } from "src/app/app.service";
+import { type ProHittingData } from "src/app/types";
 
 @Component({
   selector: "pro-hitter",
-  templateUrl: "./pro-hitter.component.html",
+  templateUrl: "../hitter.component.html",
 })
 export class ProHitterComponent implements OnInit {
-  proHittingData: any = [];
+  hittingData: ProHittingData[] = [];
+  isPro: boolean;
 
   constructor(private appService: AppService) {}
 
   ngOnInit(): void {
     this.appService.getProData().subscribe((results) => {
-      this.proHittingData = results;
-      console.log(results);
+      this.hittingData = results;
+      this.isPro = true;
     });
   }
 }
