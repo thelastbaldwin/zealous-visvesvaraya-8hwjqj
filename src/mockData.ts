@@ -2,7 +2,7 @@ import {
   type AmateurHittingData,
   type ProHittingData,
   type PlayerAverage,
-} from "./app/types";
+} from "./types";
 
 export const amateurHittingData: AmateurHittingData[] = [
   {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { AppService } from "src/app/app.service";
-import { type ProHittingData } from "src/app/types";
-import { getSDColor, clamp } from "src/app/util";
+import { AppService } from "../../app/app.service";
+import { type ProHittingData } from "../../types";
+import { getSDColor, clamp } from "../../util";
 
 @Component({
   selector: "pro-hitter",

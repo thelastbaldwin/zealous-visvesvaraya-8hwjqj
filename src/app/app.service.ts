@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
-import { amateurHittingData, proHittingData, type ProHittingData, type AmateurHittingData} from "src/mockData";
+import { type ProHittingData, type AmateurHittingData } from "../types";
+import { amateurHittingData, proHittingData } from "../mockData";
 
 @Injectable()
 export class AppService {

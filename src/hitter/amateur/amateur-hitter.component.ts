@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { AppService } from "src/app/app.service";
-import { type AmateurHittingData } from "src/app/types";
-import { getSDColor, clamp } from "src/app/util";
+import { AppService } from "../../app/app.service";
+import { type AmateurHittingData } from "../../types";
+import { getSDColor, clamp } from "../../util";
 
 @Component({
   selector: "ama-hitter",
